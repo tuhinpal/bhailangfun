@@ -1,0 +1,23 @@
+{
+  "name": "bhailangfun",
+  "version": "1.0.0",
+  "description": "Another bhailang intrepreter with regex and js",
+  "main": "runbhai.js",
+  "scripts": {
+    "test": "echo \"Test likhne ka time nahi hai\" && exit 1",
+    "runbhai": "node runbhai.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuhinpal/bhailangfun.git"
+  },
+  "keywords": [
+    "bhailang"
+  ],
+  "author": "Tuhin Kanti Pal <me@thetuhin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tuhinpal/bhailangfun/issues"
+  },
+  "homepage": "https://github.com/tuhinpal/bhailangfun#readme"
+}
