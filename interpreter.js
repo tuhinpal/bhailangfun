@@ -1,4 +1,4 @@
-module.exports = function bhaiIntrepreter(thisisbhai) {
+module.exports = function interpreter(thisisbhai) {
   try {
     thisisbhai = thisisbhai.trim();
 

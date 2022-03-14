@@ -1,4 +1,4 @@
-const intrepreter = require("./intrepreter");
+const interpreter = require("./interpreter");
 
 var thisisbhai = "";
 try {
@@ -8,7 +8,7 @@ try {
   thisisbhai = ``;
 }
 
-intrepreter(thisisbhai);
+interpreter(thisisbhai);
 
 // Author: Tuhin Kanti Pal <me@thetuhin.com>
 // this is just for fun, main stuff is done by @aniketsingh0104 and @ristri at https://bhailang.js.org/

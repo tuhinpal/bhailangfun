@@ -1,7 +1,7 @@
 {
   "name": "bhailangfun",
   "version": "1.0.0",
-  "description": "Another bhailang intrepreter with regex and js",
+  "description": "Another bhailang interpreter with Regex expressions and JS",
   "main": "runbhai.js",
   "scripts": {
     "test": "echo \"Test likhne ka time nahi hai\" && exit 1",
