@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 20px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea rows="24" style="width: 100%; padding: 8px" placeholder="Input">
+
+    hi bhai
+    bol bhai "Hello World";
+
+
+    bhai ye hai a = 3;
+    bhai ye hai b = 0;
+    bhai ye hai c = nalla;
+    bol bhai 'ok';
+
+
+    jab tak bhai (b < 5) {
+
+    agar bhai (b == a) {
+        bol bhai "b is equal to a";
+    }
+
+    b += 1;
+    }
+
+    bye bhai
+
+    </textarea>
+
+    <button style="width: 100%; margin: 20px 0">Run bhai</button>
+
+    <textarea
+      disabled
+      rows="12"
+      id="output"
+      placeholder="Output"
+      style="width: 100%; background-color: black; color: white; padding: 8px"
+    ></textarea>
+  </body>
+
+  <script type="module">
+    import interpreter from "./interpreter.js";
+
+    document.querySelector("button").addEventListener("click", async () => {
+      const input = document.querySelector("textarea").value;
+      const output = document.querySelector("#output");
+      output.value = await interpreter(input);
+    });
+  </script>
+</html>

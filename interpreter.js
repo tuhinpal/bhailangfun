@@ -1,5 +1,6 @@
-module.exports = function interpreter(thisisbhai) {
+async function interpreter(thisisbhai) {
   try {
+    var stdout = "";
     thisisbhai = thisisbhai.trim();
 
     // chalo ab dekh lete hai bhai saccha hai ya nahi
@@ -10,7 +11,11 @@ module.exports = function interpreter(thisisbhai) {
     thisisbhai = thisisbhai.slice(7, -8);
 
     // bol bhai ko console.log() kar do
-    thisisbhai = thisisbhai.replace(/bol bhai (.*);/g, `console.log($1);`);
+    thisisbhai = thisisbhai.replace(
+      /bol bhai (.*);/g,
+      `console.log($1); 
+       stdout += ($1) + '~nl~';`
+    );
 
     // bhai ye hai ko var kar do
     thisisbhai = thisisbhai.replace(/bhai ye hai (.*);/gi, `var $1;`);
@@ -32,12 +37,16 @@ module.exports = function interpreter(thisisbhai) {
 
     // chalo ab run kar do
     var constractJS = `async function main() {${thisisbhai}}; main();`;
-    eval(constractJS);
-    return;
+    await eval(constractJS);
+
+    return stdout.replace(/~nl~/g, "\n");
   } catch (error) {
     console.log(
       "Bhai mein dum nahi, here is the reason =>",
       error.message || error
     );
   }
-};
+}
+
+export default interpreter;
+// type: module

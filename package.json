@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Another bhailang interpreter with Regex expressions and JS",
   "main": "runbhai.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Test likhne ka time nahi hai\" && exit 1",
     "runbhai": "node runbhai.js"

@@ -1,8 +1,9 @@
-const interpreter = require("./interpreter");
+import interpreter from "./interpreter.js";
 
 var thisisbhai = "";
 try {
-  thisisbhai = require("fs").readFileSync("./main.bhai", "utf8");
+  const fs = await import("fs");
+  thisisbhai = fs.readFileSync("./main.bhai", "utf8");
 } catch (error) {
   // bhai ko idhaar likh do (error reason: maybe not a node process | maybe file not found)
   thisisbhai = ``;
